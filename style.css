@@ -469,6 +469,7 @@ section .title::after {
   background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100"%3E%3Cpath fill="none" stroke="%235078c0" stroke-width="4" stroke-linecap="round" d="M0 50 Q 120 0, 240 50 T 480 50 T 720 50 T 960 50 T 1200 50 T 1440 50" /%3E%3Cpath fill="none" stroke="%2397B9DB" stroke-width="3" stroke-linecap="round" d="M0 70 Q 120 20, 240 70 T 480 70 T 720 70 T 960 70 T 1200 70 T 1440 70" /%3E%3Cpath fill="none" stroke="%235078c0" stroke-width="2" stroke-linecap="round" d="M0 30 Q 120 80, 240 30 T 480 30 T 720 30 T 960 30 T 1200 30 T 1440 30" /%3E%3C/svg%3E');
   background-size: cover;
   background-position: center;
+  transition: all 1s ease-out;
 
 }
 
@@ -522,7 +523,7 @@ section .title::after {
 }
 
 .articles .articlesl .tab-button:active {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 
 .articles .articlesr {
@@ -1147,9 +1148,9 @@ ul {
 
 .footer-col .img {
   display: flex;
-  width: 25px;
   height: 50px;
   margin-bottom: 30px;
+  justify-content: space-around;
 }
 
 
@@ -1262,15 +1263,14 @@ ul {
   }
 }
 
-@media (max-width: 500px) {
-  
-}
-
 /* responsive media query start */
 @media (max-width: 1104px) {
   .about .about-content .left img {
     height: 350px;
     width: 350px;
+  }
+  .articles .articlesl .tab-button{
+    padding: 20px
   }
 }
 @media (max-width: 1050px) {
@@ -1349,6 +1349,8 @@ ul {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
+    font-weight: bold;
+    color: var(--second-color);
   }
   .home .home-content .text-2 {
     font-size: 70px;
@@ -1377,6 +1379,9 @@ ul {
   .services .serv-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+  }
+  .home::before {
+  clip-path: path('M 350 30 Q 600 0, 1000 50 T 950 200 V 918 H 0 Z')
   }
 }
 
